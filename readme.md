@@ -7,6 +7,12 @@ $ npm install gulp-monkeyscript --save-dev
 
 ## Usage
 
+Add a `monkeyscript.json` to the root of your project and add the following line to get Intellisense working:
+```
+"$schema": "./node_modules/gulp-monkeyscript/schema.json",
+```
+Then add the key-value pairs to your needs. See <a href="#showcase">Showcase</a> for an example.
+
 ```js
 var ms = require('gulp-monkeyscript');
 var msProject = ms.createProject("monkeyscript.json");
@@ -16,12 +22,6 @@ gulp.src("src/**/*.js")
     .pipe(msProject())
 	.pipe(gulp.dest("dist/"));
 
-```
-
-Add the following rule to your `monkeyscript.json` file to show which settings there are available:
-
-```
-"$schema": "./node_modules/gulp-monkeyscript/schema.json",
 ```
 
 ## Showcase
