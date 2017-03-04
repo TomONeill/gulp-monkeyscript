@@ -1,6 +1,6 @@
 {
   "name": "gulp-monkeyscript",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Prepend your userscripts with the power of a JSON configuration.",
   "main": "index.js",
   "scripts": {
