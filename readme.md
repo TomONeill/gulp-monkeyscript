@@ -11,7 +11,9 @@ Add a `monkeyscript.json` to the root of your project and add the following line
 ```
 "$schema": "./node_modules/gulp-monkeyscript/schema.json",
 ```
-Then add the key-value pairs to your needs. See <a href="#showcase">Showcase</a> for an example.
+Add the key-value pairs to your needs. See <a href="#showcase">Showcase</a> for an example.
+
+`gulpfile.js`:
 
 ```js
 var ms = require('gulp-monkeyscript');
