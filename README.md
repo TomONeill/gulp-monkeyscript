@@ -29,7 +29,7 @@ gulp.src("src/**/*.js")
 ## Showcase
 ```json
 {
-    "$schema": "./node_modules/monkey-script/schema.json",
+    "$schema": "./node_modules/gulp-monkeyscript/schema.json",
     "name": "My Awesome Userscript!",
     "namespace": "http://www.seriesfeed.com",
     "version": "1.0.0",
