@@ -1,0 +1,26 @@
+{
+  "name": "gulp-monkeyscript",
+  "version": "1.0.0",
+  "description": "Prepend your userscripts with the power of a JSON configuration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomONeill/gulp-monkeyscript.git"
+  },
+  "keywords": [
+    "gulp",
+    "monkeyscript",
+    "tampermonkey",
+    "greasemonkey",
+    "userscript"
+  ],
+  "author": "Tom O'Neill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TomONeill/gulp-monkeyscript/issues"
+  },
+  "homepage": "https://github.com/TomONeill/gulp-monkeyscript#readme"
+}

@@ -1,0 +1,239 @@
+{
+  "type": "object",
+  "title": "Root schema.",
+  "description": "This schema can be used for MonkeyScript configuration files.",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "@name",
+      "description": "The name of the script.",
+      "default": "My project"
+    },
+    "namespace": {
+      "type": "string",
+      "title": "@namespace",
+      "description": "The namespace of the script.",
+      "default": "http://www.example.com"
+    },
+    "version": {
+      "type": "string",
+      "title": "@version",
+      "description": "The script version. This is used for the update check, in case the script is not installed from userscript.org or GM/TM has problems to retrieve the scripts meta data.",
+      "default": "1.0.0"
+    },
+    "author": {
+      "type": "string",
+      "title": "@author",
+      "description": "The scripts author.",
+      "default": "John Smith"
+    },
+    "description": {
+      "type": "string",
+      "title": "@description",
+      "description": "A short significant description.",
+      "default": "MonkeyScript is of great help."
+    },
+    "homepage": {
+      "type": "string",
+      "title": "@homepage",
+      "description": "The authors homepage that is used at the options page to link from the scripts name to the given page. Please note that if the @namespace tag starts with 'http://' its content will be used for this too.",
+      "default": "http://www.homepage.com/"
+    },
+    "homepageUrl": {
+      "type": "string",
+      "title": "@homepageURL",
+      "description": "The authors homepage that is used at the options page to link from the scripts name to the given page. Please note that if the @namespace tag starts with 'http://' its content will be used for this too.",
+      "default": "http://www.homepage.com/"
+    },
+    "website": {
+      "type": "string",
+      "title": "@website",
+      "description": "The authors homepage that is used at the options page to link from the scripts name to the given page. Please note that if the @namespace tag starts with 'http://' its content will be used for this too.",
+      "default": "http://www.homepage.com/"
+    },
+    "source": {
+      "type": "string",
+      "title": "@source",
+      "description": "The authors homepage that is used at the options page to link from the scripts name to the given page. Please note that if the @namespace tag starts with 'http://' its content will be used for this too.",
+      "default": "http://www.homepage.com/"
+    },
+    "icon": {
+      "type": "string",
+      "title": "@icon",
+      "description": "The script icon in low res.",
+      "default": "http://www.homepage.com/icon.ico"
+    },
+    "iconUrl": {
+      "type": "string",
+      "title": "@iconURL",
+      "description": "The script icon in low res.",
+      "default": "http://www.homepage.com/icon.ico"
+    },
+    "defaultIcon": {
+      "type": "string",
+      "title": "@defaulticon",
+      "description": "The script icon in low res.",
+      "default": "http://www.homepage.com/icon.ico"
+    },
+    "icon64": {
+      "type": "string",
+      "title": "@icon64",
+      "description": "This scripts icon in 64x64 pixels. If this tag, but @icon is given the @icon image will be scaled at some places at the options page.",
+      "default": "http://www.homepage.com/icon64.ico"
+    },
+    "icon64Url": {
+      "type": "string",
+      "title": "@icon64URL",
+      "description": "This scripts icon in 64x64 pixels. If this tag, but @icon is given the @icon image will be scaled at some places at the options page.",
+      "default": "http://www.homepage.com/icon64.ico"
+    },
+    "updateUrl": {
+      "type": "string",
+      "title": "@updateURL",
+      "description": "An update URL for the userscript. Note: a @version tag is required to make update checks work.",
+      "default": "http://www.homepage.com/check-update.js"
+    },
+    "downloadUrl": {
+      "type": "string",
+      "title": "@downloadURL",
+      "description": "Defines the URL where the script will be downloaded from when a update was detected.",
+      "default": "http://www.homepage.com/script-latest.js"
+    },
+    "supportUrl": {
+      "type": "string",
+      "title": "@supportURL",
+      "description": "Defines the URL where the user can report issues and get personal support.",
+      "default": "http://www.homepage.com/support"
+    },
+    "include": {
+      "type": "array",
+      "title": "@include",
+      "description": "An array of the pages on that a script should run. Please note that @include doesn't support the URL hash parameter.",
+      "items": {
+        "type": "string",
+        "title": "URL",
+        "description": "The page on that a script should run. Please note that @include doesn't support the URL hash parameter.",
+        "default": "https://www.include.inc/include.js"
+      }
+    },
+    "match": {
+      "type": "array",
+      "title": "@match",
+      "description": "More or less equal to the @include tag. Note: the '<all_urls>' statement is not yet supported and the scheme part also accepts 'http*://'.",
+      "items": {
+        "type": "string",
+        "title": "URL",
+        "description": "More or less equal to the @include URL. Note: the '<all_urls>' statement is not yet supported and the scheme part also accepts 'http*://'.",
+        "default": "http://*.match.*/*"
+      }
+    },
+    "exclude": {
+      "type": "array",
+      "title": "@exclude",
+      "description": "An array of excluded URLs even if they are included by @include or @match.",
+      "items": {
+        "type": "string",
+        "title": "URL",
+        "description": "Exclude URL even if it was included by @include or @match.",
+        "default": "http://www.exclude.this/*"
+      }
+    },
+    "require": {
+      "type": "array",
+      "title": "@require",
+      "description": "Points to a JavaScript file that is loaded and executed before the script itself starts running. Note: the scripts loaded via @require and their \"use strict\" statements might influence the userscript's strict mode!",
+      "items": {
+        "type": "string",
+        "title": "URL",
+        "description": "A URL pointing to a JavaScript file that is loaded and executed before the script itself starts running.",
+        "default": "https://code.jquery.com/jquery-2.2.4.js"
+      }
+    },
+    "resource": {
+      "type": "array",
+      "title": "@resource",
+      "description": "Preloads resources that can by accessed via GM_getResourceURL and GM_getResourceText by the script.",
+      "items": {
+        "type": "object",
+        "description": "An object containing the accessor name and URL of the resource.",
+        "properties": {
+          "resourceName": {
+            "type": "string",
+            "title": "resourceName: URL",
+            "description": "The accessor name and URL of the resource.",
+            "default": "http://www.example.com/example.png"
+          }
+        }
+      }
+    },
+    "connect": {
+      "type": "array",
+      "title": "@connect",
+      "description": "This tag defines the domains (no top-level domains) including subdomains which are allowed to be retrieved by GM_xmlhttpRequest.",
+      "items": {
+        "type": "string",
+        "title": "Domain or RegEx domain",
+        "description": "Can contain (sub-) domains, self, localhost, an IP address or *. Use @domain for backward compatibility with Scriptish.",
+        "default": "self"
+      }
+    },
+    "domain": {
+      "type": "array",
+      "title": "@domain",
+      "description": "Used for backward compatibility with Scriptish. Its values should equal to @connect.",
+      "items": {
+        "type": "string",
+        "title": "Domain or RegEx domain",
+        "description": "Can contain (sub-) domains, self, localhost, an IP address or *.",
+        "default": "self"
+      }
+    },
+    "runAt": {
+      "type": "string",
+      "title": "@run-at",
+      "description": "Defines the moment the script is injected. In opposition to other script handlers, @run-at defines the first possible moment a script wants to run. This means it may happen, that a script that uses the @require tag may be executed after the document is already loaded, cause fetching the required script took that long. Anyhow, all DOMNodeInserted and DOMContentLoaded events that happended after the given injection moment are cached and delivered to the script when it is injected.",
+      "default": "document-start || document-body || document-end || document-idle || context-menu"
+    },
+    "grant": {
+      "type": "array",
+      "title": "@grant",
+      "description": "Used to whitelist GM_* functions, the unsafeWindow object and some powerful window functions. If no @grant tag is given GM/TM guesses the scripts needs.",
+      "items": {
+        "type": "string",
+        "title": "Function",
+        "description": "Any GM_* function, unsafeWindow or any window function.",
+        "default": "GM_xmlhttpRequest"
+      }
+    },
+    "noFrames": {
+      "type": "boolean",
+      "title": "@noframes",
+      "description": "This tag makes the script running on the main pages, but not at iframes.",
+      "default": false
+    },
+    "unwrap": {
+      "type": "boolean",
+      "title": "@unwrap",
+      "description": "Changes interpretation of the scripts execution. It is strongly recommended to only be used for debugging purposes.",
+      "default": false
+    },
+    "noCompat": {
+      "type": "string",
+      "title": "@nocompat",
+      "description": "TamperMonkey value: At the moment TM tries to detect whether a script was written in knowledge of Google Chrome/Chromium by looking for the @match tag, but not every script uses it. That's why TM supports this tag to disable all optimizations that might be necessary to run scripts written for Firefox/Greasemonkey. To keep this tag extensible you can to add the browser name that can be handled by the script.",
+      "default": "Chrome"
+    },
+    "copyright": {
+      "type": "string",
+      "title": "@copyright",
+      "description": "An unofficial tag to state copyright claims.",
+      "default": "Year, Name <email@address.com>"
+    },
+    "useStrict": {
+      "type": "boolean",
+      "title": "Use Strict",
+      "description": "To indicate that the code should be executed in \"strict mode\".",
+      "default": true
+    }
+  }
+}
