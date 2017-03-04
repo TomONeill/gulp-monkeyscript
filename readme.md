@@ -24,6 +24,42 @@ Add the following rule to your `monkeyscript.json` file to show which settings t
 "$schema": "./node_modules/gulp-monkeyscript/schema.json",
 ```
 
+## Showcase
+```json
+{
+    "$schema": "./node_modules/monkey-script/schema.json",
+    "name": "My Awesome Userscript!",
+    "namespace": "http://www.seriesfeed.com",
+    "version": "1.0.0",
+    "author": "Tom",
+    "description": "This userscript adds new functionality!",
+    "match": [
+        "http://www.website.com/page1/",
+        "http://www.website-alter.com/*"
+    ],
+    "runAt": "document-start",
+    "useStrict": true
+}
+```
+
+Becomes:
+
+```js
+// ==UserScript==
+// @name		My Awesome Userscript!
+// @namespace		http://www.seriesfeed.com
+// @version		1.0.0
+// @author		Tom
+// @description		This userscript adds new functionality!
+// @match		http://www.website.com/page1/
+// @match		http://www.website-alter.com/*
+// @run-at		document-start
+// ==/UserScript==
+'use strict';
+
+<other source>
+```
+
 ## Dependencies
 - <a href="https://www.npmjs.com/package/readable-stream">readable-stream</a>
 - <a href="https://www.npmjs.com/package/streamqueue">streamqueue</a>
