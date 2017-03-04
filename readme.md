@@ -21,7 +21,7 @@ gulp.src("src/**/*.js")
 Add the following rule to your `monkeyscript.json` file to show which settings there are available:
 
 ```
-"$schema": "node_modules/gulp-monkeyscript/schema.json",
+"$schema": "./node_modules/gulp-monkeyscript/schema.json",
 ```
 
 ## Dependencies
