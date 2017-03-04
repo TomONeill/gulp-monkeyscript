@@ -31,7 +31,6 @@ gulp.src("src/**/*.js")
 {
     "$schema": "./node_modules/gulp-monkeyscript/schema.json",
     "name": "My Awesome Userscript!",
-    "namespace": "http://www.seriesfeed.com",
     "version": "1.0.0",
     "author": "Tom",
     "description": "This userscript adds new functionality!",
@@ -49,7 +48,6 @@ Becomes:
 ```js
 // ==UserScript==
 // @name		My Awesome Userscript!
-// @namespace		http://www.seriesfeed.com
 // @version		1.0.0
 // @author		Tom
 // @description		This userscript adds new functionality!
