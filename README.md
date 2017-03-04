@@ -7,7 +7,7 @@ $ npm install gulp-monkeyscript --save-dev
 
 ## Usage
 
-Add a `monkeyscript.json` to the root of your project and add the following line to get Intellisense working:
+Add `monkeyscript.json` to the root of your project and add the following line to get Intellisense working:
 ```
 "$schema": "./node_modules/gulp-monkeyscript/schema.json",
 ```
