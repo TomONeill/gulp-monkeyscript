@@ -17,6 +17,10 @@
     "greasemonkey",
     "userscript"
   ],
+  "dependencies": {
+    "readable-stream": "^2.2.3",
+    "streamqueue": "^1.1.1"
+  },
   "author": "Tom O'Neill",
   "license": "MIT",
   "bugs": {

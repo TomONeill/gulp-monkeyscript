@@ -1,13 +1,5 @@
 ## Install
 
-Dependencies are not installed by default yet:
-```
-$ npm install fs --save-dev
-$ npm install readable-stream --save-dev
-$ npm install streamqueue --save-dev
-```
-
-(NOT AVAILABLE YET, CLONE AND PUT MANUALLY INTO node_modules):
 ```
 $ npm install gulp-monkeyscript --save-dev
 ```
@@ -31,6 +23,10 @@ Add the following rule to your `monkeyscript.json` file to show which settings t
 ```
 "$schema": "node_modules/gulp-monkeyscript/schema.json",
 ```
+
+## Dependencies
+- <a href="https://www.npmjs.com/package/readable-stream">readable-stream</a>
+- <a href="https://www.npmjs.com/package/streamqueue">streamqueue</a>
 
 
 ## License
